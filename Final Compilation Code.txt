@@ -1,0 +1,48 @@
+
+
+del /q dist\* 2>nul
+
+del /q build\* 2>nul
+
+
+del /q *.spec 2>nul
+
+
+
+
+cd "C:\Users\Leoncio\Desktop\Serial Port Tester"
+
+
+python -m venv venv
+
+
+venv\Scripts\activate
+
+pip install pyinstaller
+
+pip install pyserial
+
+
+pyinstaller --version
+
+
+pyinstaller --onefile --windowed --icon="assets\RS232.ico" --name="Serial Port Tester" --exclude-module matplotlib --exclude-module numpy serial_transmitter.py
+
+
+
+IP - Initialize/Identification
+P - Print/Process
+CP - Clear Print
+SP - Set Parameters
+xS - Set Unit/Scale
+xP - Set Precision
+Z - Zero/Tare
+T - Tare/Zero
+xT - Set Tare
+PU - Print Unit
+xU - Set Unit
+xM - Set Mode
+PV - Print Value
+Esc R - Escape Response
+Custom Command
+
